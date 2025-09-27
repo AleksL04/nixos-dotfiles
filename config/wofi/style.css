@@ -1,0 +1,43 @@
+window {
+    margin: 0px;
+    /* Changed border to be semi-transparent */
+    border: 1px solid rgba(136, 192, 208, 0.7); 
+    /* The most important change: a semi-transparent background */
+    background-color: rgba(46, 52, 64, 0.5); 
+}
+
+#input {
+    margin: 5px;
+    border: none;
+    color: #d8dee9;
+    /* Made the input slightly more opaque for readability */
+    background-color: rgba(59, 66, 82, 0.7); 
+}
+
+#inner-box {
+    margin: 5px;
+    border: none;
+    background-color: transparent; /* Can be made fully transparent */
+}
+
+#outer-box {
+    margin: 5px;
+    border: none;
+    background-color: transparent;
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+#text {
+    margin: 5px;
+    border: none;
+    color: #d8dee9;
+}
+
+#entry:selected {
+    /* Made the selected entry background match the input's transparency */
+    background-color: rgba(59, 66, 82, 0.7); 
+}
