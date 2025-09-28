@@ -7,6 +7,7 @@
     spotify
     xfce.thunar
     vesktop
+    prismlauncher
   ];
   programs.thunar.plugins = with pkgs.xfce; [
     thunar-archive-plugin

@@ -18,5 +18,6 @@
     hyprlock
     wlogout
     playerctl
+    nwg-look
   ];
 }

@@ -9,19 +9,26 @@ let
         wofi = "wofi";
 	hypr = "hypr";
 	scripts = "scripts";
+	wlogout = "wlogout";
+	dunst = "dunst";
+	kitty = "kitty";
+	Thunar = "Thunar";
     };
 in
 {
+    imports = [
+    	./modules/neovim.nix
+	./modules/theme.nix
+    ];
     home.username = "aleks";
     home.homeDirectory = "/home/aleks";
     programs.git.enable = true;
     home.stateVersion = "25.05";
     programs.bash = {
         enable = true;
-    	shellAliases = {
-	  btw = "echo i use nixos, btw";
-    	};
     };
+    programs.home-manager.enable = true;
+
     xdg.configFile = builtins.mapAttrs (name: subpath: {
         source = create_symlink "${dotfiles}/${subpath}";
         recursive = true;
