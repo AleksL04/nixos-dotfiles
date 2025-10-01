@@ -19,5 +19,6 @@
     wlogout
     playerctl
     nwg-look
+    eww
   ];
 }

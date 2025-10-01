@@ -40,23 +40,6 @@
         "tooltip": false
     },
 
-    // Keyboard State
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
-
-    // System tray
-    "tray": {
-        // "icon-size": 21,
-        "spacing": 10
-    },
-
     // Clock
     "clock": {
         // "timezone": "America/New_York",
@@ -64,12 +47,17 @@
         "format-alt": "{:%Y-%m-%d}"
     },
 
-    // System
-    "custom/system": {
-        "format": "",
-        "tooltip": false
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "all-outputs": true,
+        "active-first": true,
+        "tooltip-format": "{name}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": [
+        "wofi"
+    ]
     },
-
 
 
     // Harddisc space used

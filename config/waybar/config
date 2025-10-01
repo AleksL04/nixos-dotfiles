@@ -1,9 +1,9 @@
 {
     "layer": "top",
-    "margin-top": 14,
+    "margin-top": 5,
     "margin-bottom": 0,
-    "margin-left": 14,
-    "margin-right": 14,    
+    "margin-left": 5,
+    "margin-right": 5,    
     "spacing": 0,
 
     // Load Modules
@@ -11,8 +11,8 @@
         "~/.config/waybar/modules.json"
     ],   
     "modules-left": [
-        "custom/appmenu",
-	"clock"
+	    "clock",
+        "wlr/taskbar"
     ],
     "modules-center": [
         "hyprland/workspaces"

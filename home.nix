@@ -13,6 +13,7 @@ let
 	dunst = "dunst";
 	kitty = "kitty";
 	Thunar = "Thunar";
+	eww = "eww";
     };
 in
 {
@@ -28,6 +29,13 @@ in
         enable = true;
     };
     programs.home-manager.enable = true;
+
+    home.packages = with pkgs; [
+    	pulseaudio # Provides pactl, pacmd, etc.
+    	jq         # The eww/waybar scripts also need this
+	libnotify
+	pywal
+    ];
 
     xdg.configFile = builtins.mapAttrs (name: subpath: {
         source = create_symlink "${dotfiles}/${subpath}";
