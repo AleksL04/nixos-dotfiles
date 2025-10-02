@@ -1,8 +1,9 @@
+@import url('/home/aleks/.cache/wal/colors-wofi.css');
 
 window {
-    background-color: #1e1e2e;
+    background-color: @background;
     border-radius: 8px;
-    border: 2px solid #313244;
+    border: 2px solid @color8; /* Use a dimmer color for the border */
 }
 
 #input {
@@ -10,8 +11,8 @@ window {
     padding: 8px;
     border-radius: 4px;
     border: none;
-    background-color: #313244;
-    color: #cdd6f4;
+    background-color: @color0; /* Use the darkest color for input background */
+    color: @foreground;
 }
 
 #inner-box {
@@ -28,7 +29,7 @@ window {
 
 #text {
   margin: 5px;
-  color: #cdd6f4;
+  color: @foreground; /* Main text color */
 }
 
 #entry {
@@ -38,7 +39,8 @@ window {
 }
 
 #entry:selected {
-  background-color: #585b70;
+  background-color: @color1; /* Use an accent color for selected item */
+  color: @background; /* Make text on selected item contrast */
 }
 
 #img {

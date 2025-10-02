@@ -138,6 +138,32 @@
         "on-click": "pavucontrol"
     },
 
+
+    "pulseaudio#input": {
+        "format-source": " {volume}%",
+        "format-source-muted": " off",
+        "format": "{format_source}",
+        "scroll-step": 5,
+        "smooth-scrolling-threshold": 1,
+        "max-volume": 100,
+        "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+        "on-click-middle": "pavucontrol",
+        "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +5%",
+        "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -5%",
+    },
+    "pulseaudio#output": {
+        "format": "{icon} {volume}%",
+        "format-muted": " off",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "max-volume": 100,
+        "scroll-step": 5,
+        "smooth-scrolling-threshold": 1,
+        "on-click": "pavucontrol",
+        "on-click-middle": "pavucontrol",
+    },
+
     // Bluetooth
     "bluetooth": {
         "format-disabled": "",

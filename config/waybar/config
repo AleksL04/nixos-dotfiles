@@ -18,7 +18,8 @@
         "hyprland/workspaces"
     ],
     "modules-right": [
-        "pulseaudio", 
+        "pulseaudio#input", 
+        "pulseaudio#output", 
         "network", 
         "battery", 
         "custom/exit"
