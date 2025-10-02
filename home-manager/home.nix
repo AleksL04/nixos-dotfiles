@@ -22,6 +22,7 @@ in {
     ./modules/theme.nix
     ./modules/vscode.nix
     ./modules/xdg_desktop.nix
+    ./modules/hyprland-suite.nix
   ];
   home.username = "aleks";
   home.homeDirectory = "/home/aleks";
@@ -29,20 +30,6 @@ in {
   home.stateVersion = "25.05";
   programs.bash = { enable = true; };
   programs.home-manager.enable = true;
-
-  home.packages = with pkgs; [
-    pulseaudio # Provides pactl, pacmd, etc.
-    jq # The eww/waybar scripts also need this
-    mpvpaper
-    ffmpeg
-    libnotify
-    pywal
-    imagemagick
-    grim # The screenshot utility
-    slurp # For selecting a screen region
-    swappy # For editing and saving the screenshot
-    wl-clipboard
-  ];
 
   xdg.configFile = builtins.mapAttrs (name: subpath: {
     source = create_symlink "${dotfiles}/${subpath}";

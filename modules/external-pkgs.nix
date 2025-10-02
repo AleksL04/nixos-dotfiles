@@ -1,12 +1,8 @@
-{ pkgs, ... }:
-
-{
+{ inputs, pkgs, ... }: {
+  programs.hyprland.enable = true;
   environment.systemPackages = with pkgs; [
-    librewolf
-    spotify
-    xfce.thunar
-    vesktop
-    prismlauncher
+    inputs.viu.packages.${pkgs.system}.default
+    inputs.swww.packages.${pkgs.system}.swww
   ];
   programs.thunar.plugins = with pkgs.xfce; [
     thunar-archive-plugin

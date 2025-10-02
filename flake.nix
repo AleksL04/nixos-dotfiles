@@ -18,10 +18,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./system/configuration.nix
-          ./modules/viu.nix
-          ./modules/cli-tools.nix
-          ./modules/gui-apps.nix
-          ./modules/hyprland-suite.nix
+          ./modules/external-pkgs.nix
           inputs.home-manager.nixosModules.home-manager
           {
             home-manager = {
