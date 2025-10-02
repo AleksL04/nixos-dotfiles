@@ -113,12 +113,12 @@ if [ -n "$selected" ]; then
                 pkill mpvpaper || true
                 
                 # Run mpvpaper
-                mpvpaper -o "no-audio --loop-playlist shuffle" ALL "$original_path" &
+                mpvpaper -auto-pause -o "no-audio --loop-playlist shuffle --no-keepaspec" ALL "$original_path" &
                 ;;
         esac
         
         # Run pywal for both types
-        wal -i "$original_path" -n -q
+        wal -i "$original_path" -n -q --saturate 1.0
         pkill dunst; dunst &
         bash ~/.config/scripts/reload-waybar.sh
 

@@ -10,7 +10,6 @@
     kitty
     wofi
     dunst # Notification daemon
-    grim # Screenshot tool
     networkmanagerapplet
     qt5.qtwayland
     qt6.qtwayland
