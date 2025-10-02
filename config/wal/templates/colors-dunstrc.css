@@ -1,0 +1,20 @@
+# Dunst template for pywal
+[global]
+    frame_color = "{color8}"
+    separator_color = "{color1}"
+
+[urgency_low]
+    background = "{background}"
+    foreground = "{foreground}"
+    timeout = 5
+
+[urgency_normal]
+    background = "{background}"
+    foreground = "{foreground}"
+    timeout = 5
+
+[urgency_critical]
+    background = "{color1}"
+    foreground = "{color15}"
+    frame_color = "{color9}"
+    timeout = 15

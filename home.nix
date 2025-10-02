@@ -14,6 +14,7 @@ let
     kitty = "kitty";
     Thunar = "Thunar";
     eww = "eww";
+    wal = "wal";
   };
 in {
   imports = [ ./modules/neovim.nix ./modules/theme.nix ./modules/vscode.nix ];
@@ -32,7 +33,6 @@ in {
     libnotify
     pywal
     imagemagick
-
   ];
 
   xdg.configFile = builtins.mapAttrs (name: subpath: {
