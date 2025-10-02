@@ -13,25 +13,26 @@
 
   outputs = inputs: {
     nixosConfigurations = {
-    	nixos = inputs.nixpkgs.lib.nixosSystem {
-      		system = "x86_64-linux";
-		specialArgs = {
-			inherit inputs;
-		};
-      		modules = [
-        		./configuration.nix
-			./modules/viu.nix
-        		inputs.home-manager.nixosModules.home-manager
-        		{
-        		home-manager = {
-            			useGlobalPkgs = true;
-            			useUserPackages = true;
-            			users.aleks = import ./home.nix;
-            			backupFileExtension = "backup";
-          		};
-        		}
-      		];
-    	};
-     };
+      nixos = inputs.nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./system/configuration.nix
+          ./modules/viu.nix
+          ./modules/cli-tools.nix
+          ./modules/gui-apps.nix
+          ./modules/hyprland-suite.nix
+          inputs.home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.aleks = import ./home-manager/home.nix;
+              backupFileExtension = "backup";
+            };
+          }
+        ];
+      };
+    };
   };
 }

@@ -7,9 +7,6 @@
 {
   imports = [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    ./modules/cli-tools.nix
-    ./modules/gui-apps.nix
-    ./modules/hyprland-suite.nix
   ];
 
   # Bootloader.
