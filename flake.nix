@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-25.05";
     viu.url = "github:Benexl/viu";
+    swww.url = "github:LGFae/swww";
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";

@@ -35,6 +35,8 @@ in
     	jq         # The eww/waybar scripts also need this
 	libnotify
 	pywal
+	imagemagick
+
     ];
 
     xdg.configFile = builtins.mapAttrs (name: subpath: {
