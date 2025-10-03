@@ -31,18 +31,15 @@
   xdg.mimeApps.defaultApplications = {
     # --- Set Thunar as default for folders ---
     "inode/directory" = "thunar.desktop";
-
     # --- Browser for web links ---
     "text/html" = "librewolf.desktop";
     "x-scheme-handler/http" = "librewolf.desktop";
     "x-scheme-handler/https" = "librewolf.desktop";
-
     # --- PDF Files ---
-    "application/pdf" = "librewolf.desktop";
-
+    "application/pdf" = "libreoffice.desktop";
     # --- Text Files (now using our custom Neovim entry) ---
     "text/plain" = "neovim.desktop";
-    "text/markdown" = "neovim.desktop";
+    "text/markdown" = "obsidian.desktop";
     "text/x-shellscript" = "neovim.desktop"; # For shell scripts
 
     # --- Images (using LibreWolf as a fallback) ---
@@ -54,5 +51,13 @@
     # --- Videos (using LibreWolf as a fallback) ---
     "video/mp4" = "librewolf.desktop";
     "video/webm" = "librewolf.desktop";
+
+    # --- Office Documents ---
+    "application/vnd.oasis.opendocument.text" = "libreoffice.desktop";
+    "application/vnd.oasis.opendocument.spreadsheet" = "libreoffice.desktop";
+    "application/vnd.oasis.opendocument.presentation" = "libreoffice.desktop";
+    "application/msword" = "libreoffice.desktop";
+    "application/vnd.ms-excel" = "libreoffice.desktop";
+    "application/vnd.ms-powerpoint" = "libreoffice.desktop";
   };
 }

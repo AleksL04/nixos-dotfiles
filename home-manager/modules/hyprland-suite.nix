@@ -8,7 +8,6 @@
     dunst # Notification daemon
     eww # Elkowars Wacky Widgets
     hyprlock # Hyprland screen locker
-    hyprpaper # Hyprland wallpaper utility
     hypridle # Hyprland idle inhibitor
     kitty # Terminal emulator
     networkmanagerapplet # System tray icon for network management
@@ -43,6 +42,8 @@
     spotify # Music streaming
     vesktop # Discord client
     xfce.thunar # File manager
+    obsidian # Note-taking application
+    libreoffice # Office suite
 
     # -----------------------------------------------------
     # Multimedia, Theming & Scripting Dependencies
