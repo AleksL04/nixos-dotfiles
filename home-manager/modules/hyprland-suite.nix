@@ -9,6 +9,23 @@
     eww # Elkowars Wacky Widgets
     hyprlock # Hyprland screen locker
     hyprpaper # Hyprland wallpaper utility
+    hypridle # Hyprland idle inhibitor
+    kitty # Terminal emulator
+    networkmanagerapplet # System tray icon for network management
+    nwg-look # GTK3 settings editor for Wayland
+    qt5.qtwayland # Qt5 Wayland support
+    qt6.qtwayland # Qt6 Wayland support
+    waybar # Wayland bar
+    wlogout # Wayland logout menu
+    wofi # Application launcher
+
+    # -----------------------------------------------------
+    # Desktop & User Interface
+    # -----------------------------------------------------
+    dunst # Notification daemon
+    eww # Elkowars Wacky Widgets
+    hyprlock # Hyprland screen locker
+    hyprpaper # Hyprland wallpaper utility
     kitty # Terminal emulator
     networkmanagerapplet # System tray icon for network management
     nwg-look # GTK3 settings editor for Wayland

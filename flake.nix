@@ -5,6 +5,7 @@
     nixpkgs.url = "nixpkgs/nixos-25.05";
     viu.url = "github:Benexl/viu";
     swww.url = "github:LGFae/swww";
+    hyprland.url = "github:hyprwm/Hyprland";
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -19,6 +20,7 @@
         modules = [
           ./system/configuration.nix
           ./modules/external-pkgs.nix
+          ./modules/hyprland.nix
           inputs.home-manager.nixosModules.home-manager
           {
             home-manager = {
