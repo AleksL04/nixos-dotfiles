@@ -68,19 +68,19 @@
     enable = true;
     settings = {
       CPU_SCALING_GOVERNOR_ON_AC = "performance";
-      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+      CPU_SCALING_GOVERNOR_ON_BAT = "balanced";
 
-      CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
+      CPU_ENERGY_PERF_POLICY_ON_BAT = "balanced";
       CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
 
       CPU_MIN_PERF_ON_AC = 0;
       CPU_MAX_PERF_ON_AC = 100;
       CPU_MIN_PERF_ON_BAT = 0;
-      CPU_MAX_PERF_ON_BAT = 20;
+      CPU_MAX_PERF_ON_BAT = 40;
 
       #Optional helps save long term battery health
       START_CHARGE_THRESH_BAT0 = 40; # 40 and below it starts to charge
-      STOP_CHARGE_THRESH_BAT0 = 80; # 80 and above it stops charging
+      STOP_CHARGE_THRESH_BAT0 = 95; # 80 and above it stops charging
 
     };
   };
@@ -104,6 +104,10 @@
     # It's also a good idea to have a fallback for emojis and other symbols
     noto-fonts-cjk-sans
     noto-fonts-emoji
+
+    nerd-fonts.code-new-roman
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.ubuntu
   ];
 
   # Enable PipeWire and WirePlumber for audio
@@ -117,11 +121,7 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs;
-    [
-      greetd.tuigreet
-
-    ];
+  environment.systemPackages = with pkgs; [ greetd.tuigreet ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

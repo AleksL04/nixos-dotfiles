@@ -21,6 +21,7 @@
           ./system/configuration.nix
           ./modules/external-pkgs.nix
           ./modules/hyprland.nix
+          #./modules/kde.nix
           inputs.home-manager.nixosModules.home-manager
           {
             home-manager = {

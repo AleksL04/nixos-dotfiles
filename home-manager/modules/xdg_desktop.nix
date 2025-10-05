@@ -52,6 +52,15 @@
     "video/mp4" = "librewolf.desktop";
     "video/webm" = "librewolf.desktop";
 
+    # --- Archives ---
+    "application/zip" = "xarchiver.desktop";
+    "application/x-rar-compressed" = "xarchiver.desktop";
+    "application/x-7z-compressed" = "xarchiver.desktop";
+    "application/x-tar" = "xarchiver.desktop";
+    "application/gzip" = "xarchiver.desktop";
+    "application/x-bzip2" = "xarchiver.desktop";
+    "application/x-xz" = "xarchiver.desktop";
+
     # --- Office Documents ---
     "application/vnd.oasis.opendocument.text" = "libreoffice.desktop";
     "application/vnd.oasis.opendocument.spreadsheet" = "libreoffice.desktop";

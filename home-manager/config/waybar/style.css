@@ -39,6 +39,12 @@ window#waybar {
   color: @color9;
 }
 
+#custom-swaync:hover {
+  padding: 0px 5px;
+  transition: all 0.3s ease;
+  color: @color9;
+}
+
 #battery {
   padding: 0px 5px;
   transition: all 0.3s ease;
@@ -56,6 +62,11 @@ window#waybar {
   transition: all 0.3s ease;
 }
 #custom-exit {
+  padding: 0px 5px;
+  color: @color7;
+  transition: all 0.3s ease;
+}
+#custom-swaync {
   padding: 0px 5px;
   color: @color7;
   transition: all 0.3s ease;

@@ -113,7 +113,7 @@ if [ -n "$selected" ]; then
                 pkill mpvpaper || true
                 
                 # Run mpvpaper
-                mpvpaper -auto-pause -o "no-audio --loop-playlist shuffle --no-keepaspec" ALL "$original_path" &
+                mpvpaper -auto-pause -o "no-audio --loop-playlist shuffle --keepaspect=no" ALL "$original_path" &
                 ;;
         esac
         

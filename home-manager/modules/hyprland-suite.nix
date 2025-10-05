@@ -33,6 +33,7 @@
     waybar # Wayland bar
     wlogout # Wayland logout menu
     wofi # Application launcher
+    swaynotificationcenter
 
     # -----------------------------------------------------
     # GUI Applications
@@ -44,6 +45,7 @@
     xfce.thunar # File manager
     obsidian # Note-taking application
     libreoffice # Office suite
+    filezilla
 
     # -----------------------------------------------------
     # Multimedia, Theming & Scripting Dependencies
@@ -68,9 +70,13 @@
     neofetch # System information tool
     slurp # Select a region on screen
     swappy # Screenshot editing tool
-    unzip # Decompression utility
     wget # Network downloader
     wl-clipboard # Wayland clipboard utilities
-    zip # Compression utility
+    gamescope # Steam games compatibility layer for Wayland
+
+    xarchiver
+    unzip
+    zip
+    p7zip
   ];
 }
