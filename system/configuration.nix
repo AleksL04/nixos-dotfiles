@@ -67,19 +67,20 @@
   services.tlp = {
     enable = true;
     settings = {
-      CPU_SCALING_GOVERNOR_ON_AC = "performance";
-      CPU_SCALING_GOVERNOR_ON_BAT = "balanced";
+      CPU_SCALING_GOVERNOR_ON_AC = "schedutil";
+      CPU_SCALING_GOVERNOR_ON_BAT = "schedutil";
 
-      CPU_ENERGY_PERF_POLICY_ON_BAT = "balanced";
       CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+      CPU_ENERGY_PERF_POLICY_ON_BAT = "balance_power";
 
       CPU_MIN_PERF_ON_AC = 0;
       CPU_MAX_PERF_ON_AC = 100;
+
       CPU_MIN_PERF_ON_BAT = 0;
       CPU_MAX_PERF_ON_BAT = 40;
 
       #Optional helps save long term battery health
-      START_CHARGE_THRESH_BAT0 = 40; # 40 and below it starts to charge
+      START_CHARGE_THRESH_BAT0 = 90; # 40 and below it starts to charge
       STOP_CHARGE_THRESH_BAT0 = 95; # 80 and above it stops charging
 
     };
@@ -117,6 +118,17 @@
     pulse.enable = true;
     jack.enable = true;
     wireplumber.enable = true;
+  };
+
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
+
+  services.printing = {
+    enable = true;
+    drivers = with pkgs; [ cups-filters cups-browsed ];
   };
 
   # List packages installed in system profile. To search, run:

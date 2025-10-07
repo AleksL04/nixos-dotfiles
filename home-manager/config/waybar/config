@@ -18,6 +18,7 @@
         "pulseaudio#output", 
         "network", 
         "battery", 
+        "backlight",
         "custom/swaync"
     ]
 }
