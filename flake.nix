@@ -7,6 +7,7 @@
     viu.url = "github:Benexl/viu";
     swww.url = "github:LGFae/swww";
     hyprland.url = "github:hyprwm/Hyprland";
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -31,7 +32,6 @@
             ./modules/external-pkgs.nix
             ./modules/hyprland.nix
             ./modules/local-pkgs.nix
-            #./modules/kde.nix
             inputs.home-manager.nixosModules.home-manager
             {
               home-manager = {
