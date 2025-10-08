@@ -18,6 +18,7 @@
         # --- General Productivity ---
         usernamehw.errorlens # Highlights errors inline
         christian-kohler.path-intellisense # Autocompletes file paths
+        ms-azuretools.vscode-containers # Docker support
       ];
 
       userSettings = {

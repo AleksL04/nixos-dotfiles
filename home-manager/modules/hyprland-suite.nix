@@ -23,7 +23,6 @@
     # GUI Applications
     # -----------------------------------------------------
     librewolf # Web browser
-    vivaldi # Web browser
     prismlauncher # Minecraft launcher
     spotify # Music streaming
     vesktop # Discord client
