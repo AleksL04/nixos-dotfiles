@@ -18,7 +18,10 @@
     let
       system = "x86_64-linux";
       lib = inputs.nixpkgs.lib;
-      pkgs-unstable = inputs.nixpkgs-unstable.legacyPackages.${system};
+      pkgs-unstable = import inputs.nixpkgs-unstable {
+        inherit system;
+        config.allowUnfree = true;
+      };
     in {
       nixosConfigurations = {
         nixos = lib.nixosSystem {
@@ -33,6 +36,7 @@
             ./modules/hyprland.nix
             ./modules/local-pkgs.nix
             ./modules/docker.nix
+
             inputs.home-manager.nixosModules.home-manager
             {
               home-manager = {

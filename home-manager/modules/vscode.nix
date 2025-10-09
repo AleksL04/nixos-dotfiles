@@ -1,12 +1,13 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-unstable, ... }:
 
 {
   home.packages = with pkgs; [ nixfmt-classic nil ];
 
   programs.vscode = {
     enable = true;
+    package = pkgs-unstable.vscode;
     profiles.default = {
-      extensions = with pkgs.vscode-extensions; [
+      extensions = with pkgs-unstable.vscode-extensions; [
         # --- Nix Essentials ---
         jnoortheen.nix-ide
 
@@ -19,11 +20,17 @@
         usernamehw.errorlens # Highlights errors inline
         christian-kohler.path-intellisense # Autocompletes file paths
         ms-azuretools.vscode-containers # Docker support
+        ms-toolsai.jupyter # Jupyter Notebooks support
+        ms-python.python # Python support
+        ms-vscode.cpptools # C/C++ support
+        ms-vscode-remote.remote-containers # Remote - Containers
+        vscodevim.vim
       ];
 
       userSettings = {
         # --- General Settings ---
         "workbench.sideBar.location" = "right";
+        "git.confirmSync" = "false";
 
         # --- Nix Language Server Settings ---
         "nix.enableLanguageServer" = true;

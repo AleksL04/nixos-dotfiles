@@ -1,4 +1,4 @@
-{
+{ lib, config, ... }: {
   xdg.desktopEntries."neovim" = {
     name = "Neovim";
     comment = "Edit text files in Kitty";
@@ -28,29 +28,33 @@
   };
 
   # 2. Define all your default applications
+
+  xdg.mimeApps.enable = lib.mkDefault true;
+  xdg.configFile."mimeapps.list" =
+    lib.mkIf config.xdg.mimeApps.enable { force = true; };
   xdg.mimeApps.defaultApplications = {
     # --- Set Thunar as default for folders ---
     "inode/directory" = "thunar.desktop";
     # --- Browser for web links ---
-    "text/html" = "librewolf.desktop";
-    "x-scheme-handler/http" = "librewolf.desktop";
-    "x-scheme-handler/https" = "librewolf.desktop";
+    "text/html" = "zen-beta.desktop";
+    "x-scheme-handler/http" = "zen-beta.desktop";
+    "x-scheme-handler/https" = "zen-beta.desktop";
     # --- PDF Files ---
-    "application/pdf" = "libreoffice.desktop";
-    # --- Text Files (now using our custom Neovim entry) ---
+    "application/pdf" = "zen-beta.desktop";
+    # --- Text Files (now using our czen-betaustom Neovim entry) ---
     "text/plain" = "neovim.desktop";
     "text/markdown" = "obsidian.desktop";
     "text/x-shellscript" = "neovim.desktop"; # For shell scripts
 
-    # --- Images (using LibreWolf as a fallback) ---
-    "image/jpeg" = "librewolf.desktop";
-    "image/png" = "librewolf.desktop";
-    "image/gif" = "librewolf.desktop";
-    "image/webp" = "librewolf.desktop";
+    # --- Images (using zen-beta as a fallback) ---
+    "image/jpeg" = "zen-beta.desktop";
+    "image/png" = "zen-beta.desktop";
+    "image/gif" = "zen-beta.desktop";
+    "image/webp" = "zen-beta.desktop";
 
-    # --- Videos (using LibreWolf as a fallback) ---
-    "video/mp4" = "librewolf.desktop";
-    "video/webm" = "librewolf.desktop";
+    # --- Videos (using zen-beta as a fallback) ---
+    "video/mp4" = "zen-beta.desktop";
+    "video/webm" = "zen-beta.desktop";
 
     # --- Archives ---
     "application/zip" = "xarchiver.desktop";

@@ -9,6 +9,7 @@
     eww # Elkowars Wacky Widgets
     hyprlock # Hyprland screen locker
     hyprpaper # Hyprland wallpaper utility
+    hypridle
     kitty # Terminal emulator
     networkmanagerapplet # System tray icon for network management
     nwg-look # GTK3 settings editor for Wayland
@@ -43,6 +44,7 @@
     pulseaudio # Sound server (provides pactl, pacmd)
     pywal # Theming tool
     pavucontrol
+    socat
 
     # -----------------------------------------------------
     # CLI & System Utilities
