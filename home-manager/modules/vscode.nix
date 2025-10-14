@@ -25,6 +25,9 @@
         ms-vscode.cpptools # C/C++ support
         ms-vscode-remote.remote-containers # Remote - Containers
         vscodevim.vim
+
+        arrterian.nix-env-selector
+        mikestead.dotenv
       ];
 
       userSettings = {

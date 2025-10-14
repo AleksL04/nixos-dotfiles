@@ -32,6 +32,7 @@
     libreoffice # Office suite
     filezilla
     powertop
+    gfn-electron
 
     # -----------------------------------------------------
     # Multimedia, Theming & Scripting Dependencies
@@ -61,6 +62,8 @@
     wget # Network downloader
     wl-clipboard # Wayland clipboard utilities
     gamescope # Steam games compatibility layer for Wayland
+    direnv
+    nix-direnv
 
     xarchiver
     unzip

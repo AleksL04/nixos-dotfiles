@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
+MAIN_SCRIPT="/home/aleks/.config/scripts/bit.sh"
 function handle {
   if [[ ${1:0:10} == "openwindow" ]] then
     sleep 0.1
-    ./bit.sh
+    $MAIN_SCRIPT
     echo "hi there buddy"
   fi
 }

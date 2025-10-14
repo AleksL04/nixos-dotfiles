@@ -1,33 +1,35 @@
 { lib, config, ... }: {
-  xdg.desktopEntries."neovim" = {
-    name = "Neovim";
-    comment = "Edit text files in Kitty";
-    exec = "kitty nvim %U";
-    terminal = false; # The desktop entry itself doesn't run in a terminal
-    categories = [ "Utility" "TextEditor" ];
-    mimeType = [ "text/plain" "text/markdown" ]; # Associate it with text files
+
+  xdg.desktopEntries = {
+    btop = {
+      name = "btop";
+      exec = "kitty --hold btop";
+      terminal = false;
+    };
+
+    nvim = {
+      name = "Neovim";
+      exec = "nvim";
+      terminal = true;
+      noDisplay = true;
+    };
+
+    neovim = {
+      name = "Neovim";
+      comment = "Edit text files in Kitty";
+      exec = "kitty nvim %U";
+      terminal = false; # The desktop entry itself doesn't run in a terminal
+      mimeType =
+        [ "text/plain" "text/markdown" ]; # Associate it with text files
+    };
+
+    viu-media = {
+      name = "Viu Media";
+      comment = "Launch the Viu media application";
+      exec = "kitty --hold viu";
+      terminal = false;
+    };
   };
-
-  xdg.desktopEntries."viu-media" = {
-    # The name that will appear in application launchers like wofi
-    name = "Viu Media";
-
-    # A short description of the application
-    comment = "Launch the Viu media application";
-
-    # The command to execute.
-    # 'kitty --hold' runs the command and keeps the terminal window open
-    # after the 'viu' process has exited.
-    exec = "kitty --hold viu";
-
-    # This must be false because we are explicitly launching a terminal in the exec command.
-    terminal = false;
-
-    # Application categories for menu organization
-    categories = [ "Utility" "AudioVideo" "Player" ];
-  };
-
-  # 2. Define all your default applications
 
   xdg.mimeApps.enable = lib.mkDefault true;
   xdg.configFile."mimeapps.list" =
