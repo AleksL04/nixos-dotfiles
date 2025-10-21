@@ -8,6 +8,7 @@
     swww.url = "github:LGFae/swww";
     hyprland.url = "github:hyprwm/Hyprland";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -37,6 +38,9 @@
             ./modules/local-pkgs.nix
             ./modules/docker.nix
             ./modules/greeter.nix
+            ./modules/spicetify.nix
+
+            inputs.spicetify-nix.nixosModules.spicetify
 
             inputs.home-manager.nixosModules.home-manager
             {

@@ -28,12 +28,17 @@
 
         arrterian.nix-env-selector
         mikestead.dotenv
+        ms-python.black-formatter
+        ms-python.vscode-pylance
+
       ];
 
       userSettings = {
         # --- General Settings ---
         "workbench.sideBar.location" = "right";
         "git.confirmSync" = "false";
+        "update.mode" = "none";
+        "python.analysis.extraPaths" = [ ".venv\\Lib\\site-packages" ];
 
         # --- Nix Language Server Settings ---
         "nix.enableLanguageServer" = true;

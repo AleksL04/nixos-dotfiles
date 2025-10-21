@@ -25,7 +25,6 @@
     # -----------------------------------------------------
     librewolf # Web browser
     prismlauncher # Minecraft launcher
-    spotify # Music streaming
     vesktop # Discord client
     xfce.thunar # File manager
     obsidian # Note-taking application
