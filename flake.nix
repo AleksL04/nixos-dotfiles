@@ -31,32 +31,9 @@
             inherit inputs;
             inherit pkgs-unstable;
           };
-          modules = [
-            ./system/configuration.nix
-            ./modules/external-pkgs.nix
-            ./modules/hyprland.nix
-            ./modules/local-pkgs.nix
-            ./modules/docker.nix
-            ./modules/greeter.nix
-            ./modules/spicetify.nix
-
-            inputs.spicetify-nix.nixosModules.spicetify
-
-            inputs.home-manager.nixosModules.home-manager
-            {
-              home-manager = {
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                users.aleks = import ./home-manager/home.nix;
-                extraSpecialArgs = {
-                  inherit pkgs-unstable; # <-- UNSTABLE
-                  inherit inputs;
-                };
-                backupFileExtension = "backup";
-              };
-            }
-          ];
+          modules = [ ./host/configuration.nix ./nixosModules ];
         };
       };
+      homeManagerModules.default = import ./homeManagerModules;
     };
 }

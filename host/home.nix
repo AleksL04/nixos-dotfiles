@@ -1,7 +1,7 @@
 { config, lib, inputs, ... }:
 
 let
-  dotfiles = "${config.home.homeDirectory}/nixos-dotfiles/home-manager/config";
+  dotfiles = "${config.home.homeDirectory}/nixos-dotfiles/config";
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
   # Standard .config/directory
   configs = {
@@ -18,15 +18,6 @@ let
     swaync = "swaync";
   };
 in {
-  imports = [
-    inputs.zen-browser.homeModules.twilight
-    ./modules/neovim.nix
-    ./modules/theme.nix
-    ./modules/vscode.nix
-    ./modules/xdg_desktop.nix
-    ./modules/hyprland-suite.nix
-    ./modules/zen.nix
-  ];
   home.username = "aleks";
   home.homeDirectory = "/home/aleks";
   programs.git.enable = true;
