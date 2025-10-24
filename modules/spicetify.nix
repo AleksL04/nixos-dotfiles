@@ -8,7 +8,7 @@ in {
       hidePodcasts
       shuffle # shuffle+ (special characters are sanitized out of extension names)
     ];
-    theme = spicePkgs.themes.bloom;
-    colorScheme = "dark";
+    theme = spicePkgs.themes.default;
+    colorScheme = "Base";
   };
 }

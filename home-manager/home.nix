@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, lib, inputs, ... }:
 
 let
   dotfiles = "${config.home.homeDirectory}/nixos-dotfiles/home-manager/config";
@@ -19,11 +19,13 @@ let
   };
 in {
   imports = [
+    inputs.zen-browser.homeModules.twilight
     ./modules/neovim.nix
     ./modules/theme.nix
     ./modules/vscode.nix
     ./modules/xdg_desktop.nix
     ./modules/hyprland-suite.nix
+    ./modules/zen.nix
   ];
   home.username = "aleks";
   home.homeDirectory = "/home/aleks";

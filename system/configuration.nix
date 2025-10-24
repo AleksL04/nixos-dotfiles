@@ -73,6 +73,7 @@
 
     };
   };
+  nix.optimise.automatic = true;
 
   hardware.bluetooth = {
     enable = true;

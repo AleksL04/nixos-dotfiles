@@ -50,6 +50,7 @@
                 users.aleks = import ./home-manager/home.nix;
                 extraSpecialArgs = {
                   inherit pkgs-unstable; # <-- UNSTABLE
+                  inherit inputs;
                 };
                 backupFileExtension = "backup";
               };
