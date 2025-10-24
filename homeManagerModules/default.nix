@@ -7,6 +7,5 @@
     ./modules/hyprland-suite.nix
     ./modules/zen.nix
     ./modules/spicetify.nix
-
   ];
 }

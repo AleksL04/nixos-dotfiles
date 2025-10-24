@@ -6,6 +6,7 @@
       imports = [
         ./home.nix
         inputs.self.outputs.homeManagerModules.default
+
         inputs.zen-browser.homeModules.twilight
         inputs.spicetify-nix.homeManagerModules.spicetify
       ];
