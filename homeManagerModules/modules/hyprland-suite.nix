@@ -31,8 +31,6 @@
     libreoffice # Office suite
     filezilla
     powertop
-    gfn-electron
-
     # -----------------------------------------------------
     # Multimedia, Theming & Scripting Dependencies
     # -----------------------------------------------------
