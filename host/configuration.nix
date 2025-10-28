@@ -54,27 +54,6 @@
     variant = "";
   };
 
-  services.tlp = {
-    enable = true;
-    settings = {
-      CPU_SCALING_GOVERNOR_ON_AC = "schedutil";
-      CPU_SCALING_GOVERNOR_ON_BAT = "schedutil";
-
-      CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
-      CPU_ENERGY_PERF_POLICY_ON_BAT = "balance_power";
-
-      CPU_MIN_PERF_ON_AC = 0;
-      CPU_MAX_PERF_ON_AC = 100;
-
-      CPU_MIN_PERF_ON_BAT = 0;
-      CPU_MAX_PERF_ON_BAT = 40;
-
-      #Optional helps save long term battery health
-      START_CHARGE_THRESH_BAT0 = 90; # 40 and below it starts to charge
-      STOP_CHARGE_THRESH_BAT0 = 95; # 80 and above it stops charging
-
-    };
-  };
   nix.optimise.automatic = true;
 
   hardware.bluetooth = {
@@ -110,6 +89,14 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  boot.kernelParams = [ "zswap.enabled=1" ];
+
+  # This creates a low-priority, "last resort" swap file on your disk.
+  swapDevices = [{
+    device = "/swapfile"; # Location of the file
+    size = 8192; # Size in MiB (e.g., 8192 = 8GiB)
+  }];
 
   # Enable fonts
   fonts.packages = with pkgs; [
@@ -147,33 +134,9 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
+
   environment.systemPackages = with pkgs; [ greetd.tuigreet ];
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.05"; # Did you read the comment?
 
 }
