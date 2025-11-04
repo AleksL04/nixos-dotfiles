@@ -132,8 +132,6 @@
     drivers = with pkgs; [ cups-filters cups-browsed ];
   };
 
-  services.fprintd.enable = true;
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
 
