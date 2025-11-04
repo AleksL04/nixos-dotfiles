@@ -1,10 +1,10 @@
 {
   imports = [
-    ./modules/hyprland.nix
-    ./modules/steam.nix
-    ./modules/thunar.nix
-    ./modules/docker.nix
-    ./modules/greeter.nix
-    ./modules/tlp.nix
+    ./hyprland.nix
+    ./steam.nix
+    ./thunar.nix
+    ./docker.nix
+    ./greeter.nix
+    ./tlp.nix
   ];
 }

@@ -1,13 +1,15 @@
 {
   imports = [
-    ./modules/neovim.nix
-    ./modules/theme.nix
-    ./modules/vscode.nix
-    ./modules/xdg_desktop.nix
-    ./modules/hyprland-suite.nix
-    ./modules/zen.nix
-    ./modules/spicetify.nix
-    ./modules/external-pkgs.nix
-
+    ./neovim.nix
+    ./theme.nix
+    ./vscode.nix
+    ./xdg_desktop.nix
+    ./zen.nix
+    ./spicetify.nix
+    ./unstable-apps.nix
+    ./flake-apps.nix
+    ./gui.nix
+    ./cli.nix
+    ./system.nix
   ];
 }

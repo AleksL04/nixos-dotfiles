@@ -19,6 +19,7 @@
     wlogout # Wayland logout menu
     wofi # Application launcher
     swaynotificationcenter
+    zoom-us
 
     # -----------------------------------------------------
     # GUI Applications
