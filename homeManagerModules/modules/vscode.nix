@@ -25,6 +25,7 @@
         ms-vscode.cpptools # C/C++ support
         ms-vscode-remote.remote-containers # Remote - Containers
         vscodevim.vim
+        Google.gemini-cli-vscode-ide-companion
 
         arrterian.nix-env-selector
         mikestead.dotenv

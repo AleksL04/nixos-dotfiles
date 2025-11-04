@@ -1,6 +1,5 @@
 {
   imports = [
-    ./modules/external-pkgs.nix
     ./modules/hyprland.nix
     ./modules/steam.nix
     ./modules/thunar.nix
