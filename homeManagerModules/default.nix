@@ -6,7 +6,7 @@
     ./xdg_desktop.nix
     ./zen.nix
     ./spicetify.nix
-    ./unstable-apps.nix
+    #./unstable-apps.nix
     ./flake-apps.nix
     ./gui.nix
     ./cli.nix

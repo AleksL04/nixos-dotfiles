@@ -22,7 +22,13 @@ in {
   home.homeDirectory = "/home/aleks";
   programs.git.enable = true;
   home.stateVersion = "25.05";
-  programs.bash = { enable = true; };
+  programs.bash = {
+    enable = true;
+    shellAliases = {
+      gemini =
+        "docker run -it --rm --env-file ~/.docker-secrets.env -w /app naoyoshinori/gemini-cli:0-node gemini";
+    };
+  };
   programs.home-manager.enable = true;
 
   xdg.configFile = (builtins.mapAttrs (name: subpath: {
