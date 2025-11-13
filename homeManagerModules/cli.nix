@@ -14,5 +14,6 @@
     # Scripting Dependencies
     jq
     socat
+    fzf
   ];
 }

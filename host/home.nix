@@ -30,6 +30,7 @@ in {
     };
   };
   programs.home-manager.enable = true;
+  programs.fzf.enableBashIntegration = true;
 
   xdg.configFile = (builtins.mapAttrs (name: subpath: {
 
