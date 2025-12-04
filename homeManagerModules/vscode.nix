@@ -24,14 +24,12 @@
         ms-python.python # Python support
         ms-vscode.cpptools # C/C++ support
         ms-vscode-remote.remote-containers # Remote - Containers
-        vscodevim.vim
         Google.gemini-cli-vscode-ide-companion
 
         arrterian.nix-env-selector
         mikestead.dotenv
         ms-python.black-formatter
         ms-python.vscode-pylance
-
       ];
 
       userSettings = {
@@ -40,6 +38,7 @@
         "git.confirmSync" = "false";
         "update.mode" = "none";
         "python.analysis.extraPaths" = [ ".venv\\Lib\\site-packages" ];
+        "editor.inlineSuggest.enabled" = false;
 
         # --- Nix Language Server Settings ---
         "nix.enableLanguageServer" = true;

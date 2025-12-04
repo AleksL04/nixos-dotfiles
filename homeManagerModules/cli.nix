@@ -10,6 +10,7 @@
     git
     direnv
     nix-direnv
+    lazydocker
 
     # Scripting Dependencies
     jq

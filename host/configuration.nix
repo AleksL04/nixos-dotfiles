@@ -105,7 +105,7 @@
     roboto
     # It's also a good idea to have a fallback for emojis and other symbols
     noto-fonts-cjk-sans
-    noto-fonts-emoji
+    noto-fonts-color-emoji
 
     nerd-fonts.code-new-roman
     nerd-fonts.jetbrains-mono
@@ -135,7 +135,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
 
-  environment.systemPackages = with pkgs; [ greetd.tuigreet ];
+  environment.systemPackages = with pkgs; [ tuigreet ];
 
   system.stateVersion = "25.05"; # Did you read the comment?
 

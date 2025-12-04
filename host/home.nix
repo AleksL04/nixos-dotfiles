@@ -21,12 +21,12 @@ in {
   home.username = "aleks";
   home.homeDirectory = "/home/aleks";
   programs.git.enable = true;
-  home.stateVersion = "25.05";
+  home.stateVersion = "25.11";
   programs.bash = {
     enable = true;
     shellAliases = {
-      gemini =
-        "docker run -it --rm --env-file ~/.docker-secrets.env -w /app naoyoshinori/gemini-cli:0-node gemini";
+      gemini = ''
+        docker run -it --rm --user root --env-file ~/.docker-secrets.env -w /app -v "$(pwd):/app" -v ~/.gemini:/root/.gemini naoyoshinori/gemini-cli:0-node gemini'';
     };
   };
   programs.home-manager.enable = true;

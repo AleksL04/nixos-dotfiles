@@ -1,7 +1,7 @@
 { inputs, pkgs, ... }: {
 
   home.packages = [
-    inputs.viu.packages.${pkgs.system}.default
-    inputs.swww.packages.${pkgs.system}.swww
+    inputs.viu.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.swww.packages.${pkgs.stdenv.hostPlatform.system}.swww
   ];
 }
