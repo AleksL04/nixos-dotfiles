@@ -14,7 +14,7 @@ jobs:
     # (Optional) Free up disk space to prevent "No space left on device" errors
     # NixOS builds are large, and the default runner only has ~14GB free.
     - name: Free Disk Space (Ubuntu)
-      uses: jlumbroso/free-disk-space-action@v1.3.1
+      uses: jlumbroso/free-disk-space@v1.3.1
       with:
         tool-cache: true
         android: true
