@@ -1,0 +1,29 @@
+name: Check & Cache NixOS
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - uses: DeterminateSystems/nix-installer-action@v9
+    
+    # 1. SETUP CACHIX
+    # This automatically pushes any build results to your cache
+    - uses: cachix/cachix-action@v15
+      with:
+        name: your-cache-name # <--- REPLACE THIS with your actual cache name
+        authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+
+    - name: Check Flake
+      run: nix flake check
+
+    # 2. BUILD
+    # As this builds, Cachix uploads the binaries to your account
+    - name: Build NixOS System
+      run: nix build .#nixosConfigurations.your-hostname.config.system.build.toplevel
