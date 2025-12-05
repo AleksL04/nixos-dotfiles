@@ -17,7 +17,7 @@ jobs:
     # This automatically pushes any build results to your cache
     - uses: cachix/cachix-action@v15
       with:
-        name: your-cache-name # <--- REPLACE THIS with your actual cache name
+        name: aleks-nixos-cache # <--- REPLACE THIS with your actual cache name
         authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
 
     - name: Check Flake
