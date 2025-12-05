@@ -11,6 +11,7 @@
     direnv
     nix-direnv
     lazydocker
+    cachix
 
     # Scripting Dependencies
     jq

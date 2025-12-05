@@ -6,5 +6,6 @@
     ./docker.nix
     ./greeter.nix
     ./tlp.nix
+    ./cachix.nix
   ];
 }
