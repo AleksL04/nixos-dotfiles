@@ -11,19 +11,33 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    # (Optional) Free up disk space to prevent "No space left on device" errors
+    # NixOS builds are large, and the default runner only has ~14GB free.
+    - name: Free Disk Space (Ubuntu)
+      uses: jlumbroso/free-disk-space-action@v1.3.1
+      with:
+        tool-cache: true
+        android: true
+        dotnet: true
+        haskell: true
+        large-packages: true
+        docker-images: true
+        swap-storage: true
+
     - uses: DeterminateSystems/nix-installer-action@v9
     
+    - uses: DeterminateSystems/magic-nix-cache-action@v2
+
     # 1. SETUP CACHIX
-    # This automatically pushes any build results to your cache
     - uses: cachix/cachix-action@v15
       with:
-        name: aleks-nixos-cache # <--- REPLACE THIS with your actual cache name
+        name: aleks-nixos-cache
         authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
 
     - name: Check Flake
       run: nix flake check
 
     # 2. BUILD
-    # As this builds, Cachix uploads the binaries to your account
+    # targeting 'nixos' because your command was '...#nixos'
     - name: Build NixOS System
-      run: nix build .#nixosConfigurations.your-hostname.config.system.build.toplevel
+      run: nix build .#nixosConfigurations.nixos.config.system.build.toplevel
