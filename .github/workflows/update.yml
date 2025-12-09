@@ -1,9 +1,13 @@
 name: Update Flake Inputs
 
 on:
-  workflow_dispatch: # Allows manual triggering
+  workflow_dispatch:
   schedule:
     - cron: '0 0 * * 0' # Runs every Sunday at midnight
+
+permissions:
+  contents: write
+  pull-requests: write
 
 jobs:
   update-flake:
