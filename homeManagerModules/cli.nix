@@ -17,5 +17,6 @@
     jq
     socat
     fzf
+    vlc
   ];
 }
