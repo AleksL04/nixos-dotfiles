@@ -12,6 +12,7 @@
     nix-direnv
     lazydocker
     cachix
+    devpod-desktop
 
     # Scripting Dependencies
     jq
