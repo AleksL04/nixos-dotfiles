@@ -11,5 +11,6 @@
     ./gui.nix
     ./cli.nix
     ./system.nix
+    ./anyrun.nix
   ];
 }

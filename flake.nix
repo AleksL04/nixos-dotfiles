@@ -4,15 +4,17 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
-    viu.url = "github:Benexl/viu";
-    swww.url = "github:LGFae/swww";
-    hyprland.url = "github:hyprwm/Hyprland";
-    zen-browser.url = "github:0xc000022070/zen-browser-flake";
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprland.url = "github:hyprwm/Hyprland";
+    viu.url = "github:Benexl/viu";
+    swww.url = "github:LGFae/swww";
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    anyrun.url = "github:anyrun-org/anyrun";
+
   };
 
   outputs = inputs:
