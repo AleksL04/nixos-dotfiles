@@ -40,6 +40,7 @@
         "update.mode" = "none";
         "python.analysis.extraPaths" = [ ".venv\\Lib\\site-packages" ];
         "editor.inlineSuggest.enabled" = false;
+        "files.insertFinalNewline" = true;
 
         # --- Nix Language Server Settings ---
         "nix.enableLanguageServer" = true;
