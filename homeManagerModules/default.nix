@@ -12,5 +12,6 @@
     ./cli.nix
     ./system.nix
     #./anyrun.nix
+    ./noctalia.nix
   ];
 }

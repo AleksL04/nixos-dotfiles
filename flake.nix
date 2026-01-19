@@ -13,8 +13,10 @@
     swww.url = "github:LGFae/swww";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
-    anyrun.url = "github:anyrun-org/anyrun";
-
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
   };
 
   outputs = inputs:

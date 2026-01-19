@@ -98,6 +98,8 @@
     size = 8192; # Size in MiB (e.g., 8192 = 8GiB)
   }];
 
+  services.upower.enable = true;
+
   # Enable fonts
   fonts.packages = with pkgs; [
     fira-sans
